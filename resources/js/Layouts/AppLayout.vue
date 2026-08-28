@@ -49,11 +49,14 @@ import LoadingSpinner from '@/packages/ui/src/LoadingSpinner.vue';
 import { twMerge } from 'tailwind-merge';
 import Button from '@/Components/ui/button/Button.vue';
 import { openFeedback } from '@/utils/feedback';
+import { useTabTimerIndicator } from '@/utils/useTabTimerIndicator';
 
 defineProps({
     title: String,
     mainClass: String,
 });
+
+useTabTimerIndicator();
 
 const showSidebarMenu = ref(false);
 const isUnloading = ref(false);
